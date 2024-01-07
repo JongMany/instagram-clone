@@ -1,0 +1,16 @@
+.container {
+    position: absolute;
+    bottom: 76px;
+    left: 12px;
+    color: white;
+    z-index: 109;
+    border-radius: 8px;
+    width: 266px;
+    padding: 8px;
+    background-color: rgb(38, 38, 38);
+}
+.item {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 18px;
+}

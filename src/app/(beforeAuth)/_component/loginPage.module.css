@@ -18,7 +18,7 @@
     color: black;
 }
 
-.signup-container {
+.login-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,18 +27,12 @@
     border: 1px solid rgb(219, 219, 219);
     margin-bottom: 10px;
 }
-.signup-container > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 10px;
-}
+
 .logo {
     margin: 36px 0 12px;
 }
 
-.signup-container > form {
+.login-container > form {
     margin: 36px 0 12px;
     display: flex;
     flex-direction: column;
@@ -64,14 +58,14 @@
     font-weight: 700;
 }
 
-.login-container{
+.signup-container{
     padding: 25px 0;
     border: 1px solid rgb(219, 219, 219);
     display: flex;
     justify-content: center;
     column-gap: 0.5rem;
 }
-.login-container a {
+.signup-container a {
     color: rgba(0, 149, 246, 0.7);
     font-weight: 700;
 }

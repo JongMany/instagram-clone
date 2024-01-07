@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-section {
+  flex: 1;
+}
+
+.login {
+  background-color: black;
+}
+.non-login {
+  background-color: white;
+}

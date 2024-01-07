@@ -1,19 +1,24 @@
-'use client'
-import {Dispatch, SetStateAction} from "react";
+import React, {Dispatch, SetStateAction, useState} from "react";
 import style from './header.module.css';
 import Link from "next/link";
 import Image from "next/image";
 import Default from '/public/default.jpeg';
+import SettingModal from "@/app/(afterAuth)/_component/SettingModal";
+import Modal from "@/app/_component/Modal";
 
 type Props = {
   setSearchMode: Dispatch<SetStateAction<boolean>>;
+  searchMode: boolean
 }
 
-export default function SearchModeHeader({setSearchMode}: Props) {
-  return <header className={style.header}>
+export default function CommonHeader({setSearchMode, searchMode}: Props) {
+  const [showModal, setShowModal] = useState(false);
+
+  console.log(showModal)
+  return <header className={`${style.header} ${!searchMode ? style.show : ''}`}>
     <section className={style['logo-container']}>
       <Link href='/'>
-        <div>
+        <div className={`${style.logo} ${searchMode ? style.shrink : ''}`}>
           <svg
               aria-label='Instagram'
               fill='currentColor'
@@ -56,7 +61,7 @@ export default function SearchModeHeader({setSearchMode}: Props) {
           </div>
         </Link>
       </div>
-      <div>
+      <div onClick={() => setSearchMode(true)}>
         <Link href='#'>
           <div className={style.link}>
             <div>
@@ -199,9 +204,13 @@ export default function SearchModeHeader({setSearchMode}: Props) {
         </Link>
       </div>
     </section>
-    <section>
+    <section className={style.last} onClickCapture={()=>setShowModal(true)}>
+      {showModal &&
+          <Modal open={showModal} onClose={() => setShowModal(false)}>
+            <SettingModal onClose={()=>setShowModal(false)}/>
+          </Modal>}
       <Link href='#'>
-        <div className={style.link}>
+        <div className={`${style['last-item']}`}>
           <div>
             <svg
                 aria-label='설정'

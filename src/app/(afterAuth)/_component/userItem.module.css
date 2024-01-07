@@ -1,0 +1,50 @@
+.container {
+    padding: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 100ms;
+}
+
+.container:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.image-container {
+    margin-right: 12px;
+}
+
+.image-background {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.image-background img {
+    width: 44px;
+    height: 44px;
+}
+
+.info-container {
+    flex: 1 1 auto;
+    max-width: 100%;
+}
+
+.id {
+    font-weight: 600;
+
+}
+
+.meta > span{
+    font-weight: 400;
+    max-width: 100%;
+    color: rgb(168, 168, 168);
+}
+
+.delete > span{
+    font-weight: 400;
+    color: rgb(168, 168, 168);
+}
