@@ -2,8 +2,12 @@ import Link from 'next/link';
 import React from 'react';
 
 import style from './loginPage.module.css';
+import LoginForm from "@/app/(beforeAuth)/_components/LoginForm";
+
 
 export default function LoginPage() {
+
+
   return (
       <div className={style.window}>
         <div className={style.container}>
@@ -25,17 +29,7 @@ export default function LoginPage() {
                   }}
               ></i>
             </div>
-            <form method='post'>
-              <div>
-                <input className={style.input} type='text' name='id' placeholder='아이디'/>
-              </div>
-              <div>
-                <input className={style.input} type='password' name='password' placeholder='비밀번호'/>
-              </div>
-              <div>
-                <button className={style.button} type='submit'>로그인</button>
-              </div>
-            </form>
+            <LoginForm/>
           </section>
           <section className={style['signup-container']}>
             <p>계정이 없으신가요?</p>

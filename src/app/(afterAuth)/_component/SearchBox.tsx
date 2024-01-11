@@ -16,7 +16,7 @@ const SearchBox = ({searchMode}: Props) => {
     inputRef.current && inputRef.current.focus();
     setFocus(true);
   }
-  console.log(focus)
+
   return (
       <div className={`${style.container} ${searchMode && style.show}`}>
         <div>
@@ -71,7 +71,6 @@ const SearchBox = ({searchMode}: Props) => {
                   <UserItem />
                   <UserItem />
                   <UserItem />
-                  {/*</div>*/}
                 </div>
               </div>
             </section>
