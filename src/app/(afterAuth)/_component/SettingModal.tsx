@@ -13,7 +13,8 @@ const SettingModal = ({onClose}: Props) => {
   const handleSignOut = async () => {
     try {
       const res = await signOut({redirect: false});
-      router.replace('/')
+      router.replace('/');
+      router.refresh();
     } catch (err) {
       console.error(err)
     }

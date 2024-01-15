@@ -23,6 +23,7 @@ const LoginForm = () => {
         console.log('2', response)
       } else {
         router.replace('/');
+        router.refresh();
       }
 
       resetForm();

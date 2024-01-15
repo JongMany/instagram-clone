@@ -1,11 +1,8 @@
-import LoginPage from '@/app/(beforeAuth)/_components/LoginPage';
-import MainPage from '@/app/(afterAuth)/_component/MainPage';
-import DecisionLogin from "@/app/_component/DecisionLogin";
+import { auth } from '@/auth';
+import MainOrLoginPage from './_component/MainOrLoginPage';
 
-export default function RootPage() {
-  // 로그인 여부에 따라 로그인 화면 or 메인 화면
+export default async function RootPage() {
+  const session = await auth();
 
-  return (
-    <DecisionLogin />
-  );
+  return <MainOrLoginPage isLogin={!!session?.user?.email} />;
 }
