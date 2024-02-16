@@ -9,7 +9,7 @@ const initialForm = { id: "", password: "" };
 const LoginForm = () => {
   const { form, onChangeForm, resetForm } = useForm(initialForm);
   const router = useRouter();
-  console.log(form, resetForm);
+  console.log(form, resetForm, form);
 
   const handleLogin: FormEventHandler = async (e) => {
     e.preventDefault();
